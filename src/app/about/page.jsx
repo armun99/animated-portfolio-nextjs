@@ -1,12 +1,14 @@
 "use client"
-import React, { useContext  , useRef } from 'react'
-import { motion, useInView } from 'framer-motion';
+import React, { useRef, useEffect } from 'react'
+import { motion, useInView, useScroll } from 'framer-motion';
 import Brain from '@/components/brain'
-import { ScrollContext } from '@/components/transitionProvider'
 const SKILLS = ["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind", "Git", "GitHub", "Docker", "Blockchain", "Web3", "Crypto", "Team collaboration", "Multi-Signature Wallet Design", "API Integration"];
 const About = () => {
-  
-  const scrollYProgress = useContext(ScrollContext);
+  const scrollRef = useRef(null);
+  useEffect(() => {
+    scrollRef.current = document.getElementById('scroll-container');
+  }, []);
+  const { scrollYProgress } = useScroll({ container: scrollRef })
   const skillRef= useRef(null);
   const isInView = useInView(skillRef);
 
@@ -21,7 +23,7 @@ const About = () => {
     <motion.div  initial={{opacity:0}} animate={{opacity:1}} transition={{duration:2 , ease: "easeInOut" }} > 
 
       {/* container */}
-      <div className='h-full flex overflow-scroll' >
+      <div className='h-full flex'>
         {/* text container*/}
         <div className=' flex flex-col  gap-12 lg:w-2/3 xl:w-1/2'>
 
