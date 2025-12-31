@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import NavLink from './navLink'
 import {motion} from 'framer-motion'
-const links = [{label: "Home", href: "/"}, {label: "About", href: "/about"}, {label: "Portfolio", href: "/portfolio"}, {label: "Contact", href: "/contact"}]
+const links = [{label: "Home", href: "/"}, {label: "About", href: "/about"}, {label: "Contact", href: "/contact"}]
 const Navbar = () => {
   const [open, setOpen] = useState(false) ;
   const topVariants = {
@@ -55,8 +55,8 @@ const Navbar = () => {
       </div>
       <div className='sm:hidden md:flex md:justify-center md:w-1/3'>
         <Link className='flex items-center gap-2 bg-black text-white p-1 rounded-md' href="/">
-        <span className='text-base font-bold'>lama</span>
-        <span className='text-base font-bold bg-white text-black p-1 rounded-md '>.dev</span>
+        <span className='text-base font-bold'>armun</span>
+        <span className='text-base font-bold bg-white text-black p-1 rounded-md '>99</span>
         </Link>
       </div>
       <div className='items-center gap-3 hidden sm:flex md:w-1/3 md:justify-end'>

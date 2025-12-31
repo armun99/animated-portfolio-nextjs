@@ -5,7 +5,7 @@ import Brain from '@/components/brain'
 import { ScrollContext } from '@/components/transitionProvider'
 const SKILLS = ["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind", "Git", "GitHub", "Docker", "Blockchain", "Web3", "Crypto", "Team collaboration", "Multi-Signature Wallet Design", "API Integration"];
 const About = () => {
-  // Get scrollYProgress from context
+  
   const scrollYProgress = useContext(ScrollContext);
   const skillRef= useRef(null);
   const isInView = useInView(skillRef);
@@ -18,7 +18,7 @@ const About = () => {
     arrowRef.current.scrollIntoView({behavior: 'smooth'});
   }
   return (
-    <motion.div initial={{y:"-200vh"}} animate={{ y:"0%" }}  transition={{ duration: 1.5 }}> 
+    <motion.div  initial={{opacity:0}} animate={{opacity:1}} transition={{duration:2 , ease: "easeInOut" }} > 
 
       {/* container */}
       <div className='h-full flex overflow-scroll' >
@@ -30,11 +30,9 @@ const About = () => {
             <div className='flex flex-col lg:gap-20'>
             <h1 className='text-2xl font-bold'>BIOGRAPHY</h1>
             <p className='text-gray-700'>
-                Joined Bitpin as a student when the startup had only 8 employees and grew with the company over 5 years, becoming an
-              early core member across four teams. A strong team-builder whose teams now manage critical crypto deposit and
-              withdrawal monitoring. Interested in JavaScript since my student years, and over the past two years have built various
-              tools using JavaScript. Outside of work, I stay active through training and rock climbing, and enjoy strategy-based video
-              games.
+            Front-end Developer and Web3 Automation Engineer with hands-on experience in JavaScript, React, Next.js, and blockchain-based systems. Started as a student in an early-stage crypto startup and evolved into a core contributor across four critical teams over five years.
+
+Experienced in building internal Web3 tools, automation workflows, Telegram bots, and operational dashboards to support wallet management, monitoring, and compliance teams. Strong understanding of blockchain transactions, multi-signature wallet architectures, and crypto operations, combined with a collaborative mindset and a focus on efficiency, reliability, and scalable solutions.
             </p>
             </div>
 
@@ -146,7 +144,7 @@ const About = () => {
               
               <Brain scrollYProgress={scrollYProgress} />
             
-      </div>
+       </div>
     </div>
   </motion.div>
 )
