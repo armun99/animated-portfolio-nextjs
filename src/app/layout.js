@@ -2,7 +2,7 @@ import "./globals.css";
 import TransitionProvider from "@/components/transitionProvider";
 
 export const metadata = {
-  title: "Lama Dev Portfolio App",
+  title: "Armun Portfolio App",
   description: "Animated Portfolio Page",
 };
 

@@ -11,7 +11,7 @@ const Contact = () => {
   const {register, handleSubmit, formState: {errors}} = useForm();
   const onSubmit = (e) =>{
    
-    e.preventDefault();
+    //e.preventDefault();
     const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
     const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
     const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
@@ -47,11 +47,10 @@ const Contact = () => {
             <textarea {...register("message", { required: "Message is required" })} name="message" className='border-t-none border-l-none border-r-none border-b-2 focus:outline-none border-gray-500 bg-transparent' type="text" placeholder='Write your message here...' />
             {errors.message && <p className='text-red-500'>{errors.message.message}</p>}
             <p className='text-gray-500 font-semibold'>Email address:</p>
-            <input {...register("name", { required: "Enter your email address Abdullah" })} name="name" className='border-t-none border-l-none border-r-none border-b-2 focus:outline-none border-gray-500 bg-transparent' type="email" placeholder='Enter your email address...' />
-            {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
+            <input {...register("email", { required: "Enter your email address" })} name="email" autoComplete="email" className='border-t-none border-l-none border-r-none border-b-2 focus:outline-none border-gray-500 bg-transparent' type="email" placeholder='Enter your email address...' />
+            {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
             <button className='bg-[#E9D5FE] text-black p-2 rounded-md' type='submit'>Send</button>
-            {success && <p className='text-green-500'>Message sent successfully</p>}
-            {error && <p className='text-red-500'>Message not sent</p>}
+            {success? <p className='text-green-500'>Message sent successfully</p> : error? <p className='text-red-500'>Message not sent</p> : null}
           </form>
         </div>
       </div>

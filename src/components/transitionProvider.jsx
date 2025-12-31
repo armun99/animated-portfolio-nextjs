@@ -1,11 +1,13 @@
 "use client"
 import { AnimatePresence } from 'framer-motion'
-import React from 'react'
+import React, { createContext } from 'react'
 import Navbar from './Navbar'
-import { motion } from 'framer-motion'
+import { motion, useScroll } from 'framer-motion'
 import { usePathname } from 'next/navigation'
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
+// Create context for scrollYProgress
+//export const ScrollContext = createContext(null);
 
 const TransitionProvider = ({children}) => {
     const [displayPath, setDisplayPath] = useState("");
@@ -67,7 +69,7 @@ const TransitionProvider = ({children}) => {
       </div>
 
     
-        <div id="scroll-container" className="h-[calc(100vh-6rem)] relative z-10 overflow-y-auto scrollbar-hide">
+        <div className="h-[calc(100vh-6rem)] relative z-10 overflow-y-auto scrollbar-hide">
           {children}
         </div>
       
