@@ -1,8 +1,5 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import TransitionProvider from "@/components/transitionProvider";
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Lama Dev Portfolio App",

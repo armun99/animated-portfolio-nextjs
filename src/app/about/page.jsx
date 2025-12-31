@@ -1,6 +1,6 @@
 "use client"
 import React, { useContext  , useRef } from 'react'
-import { motion, useScroll , useInView } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import Brain from '@/components/brain'
 import { ScrollContext } from '@/components/transitionProvider'
 const SKILLS = ["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind", "Git", "GitHub", "Docker", "Blockchain", "Web3", "Crypto", "Team collaboration", "Multi-Signature Wallet Design", "API Integration"];

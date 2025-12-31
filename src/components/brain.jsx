@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { motion, useTransform } from "framer-motion";
 
-const brain = ({ scrollYProgress }) => {
+const Brain = ({ scrollYProgress }) => {
   const rotatesForward1 = useTransform(scrollYProgress, [0, 1], [0, 360]);
   const rotatesForward2 = useTransform(scrollYProgress, [0, 1], [0, 180]);
   const rotatesForward3 = useTransform(scrollYProgress, [0, 1], [0, 90]);
@@ -1620,4 +1620,4 @@ const brain = ({ scrollYProgress }) => {
   );
 };
 
-export default brain
+export default Brain

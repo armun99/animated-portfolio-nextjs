@@ -1,6 +1,6 @@
 "use client"
 import { AnimatePresence } from 'framer-motion'
-import React, { createContext, useContext } from 'react'
+import React, { createContext } from 'react'
 import Navbar from './Navbar'
 import { motion, useScroll } from 'framer-motion'
 import { usePathname } from 'next/navigation'
@@ -9,7 +9,7 @@ import { useEffect, useState, useRef } from "react";
 // Create context for scrollYProgress
 export const ScrollContext = createContext(null);
 
-const transitionProvider = ({children}) => {
+const TransitionProvider = ({children}) => {
     const [displayPath, setDisplayPath] = useState("");
     const pathName = usePathname();
     console.log(pathName);
@@ -81,4 +81,4 @@ const transitionProvider = ({children}) => {
   )
 }
 
-export default transitionProvider
+export default TransitionProvider

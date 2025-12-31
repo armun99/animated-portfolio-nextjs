@@ -2,7 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useState } from 'react'
-import NavLink from './navLink'
+import NavLink from './NavLink'
 import {motion} from 'framer-motion'
 const links = [{label: "Home", href: "/"}, {label: "About", href: "/about"}, {label: "Contact", href: "/contact"}]
 const Navbar = () => {
