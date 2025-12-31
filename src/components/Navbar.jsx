@@ -66,7 +66,7 @@ const Navbar = () => {
         <Link href="https://github.com/armun99">
         <img src="/github.png" alt="github" className='w-5 h-5 rounded-full' />
         </Link>
-        <Link href="https://www.instagram.com/arrmun99/">
+        <Link href="https://www.instagram.com/armun99/">
         <img src="/instagram.png" alt="instagram" className='w-5 h-5 rounded-full' />
         </Link>
 
